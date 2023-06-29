@@ -102,9 +102,12 @@ def round_up(amount, round_to):
 def is_string(input):
     return isinstance(input, str)
 
-
 # unit converter
-def convert_units(value, from_unit, to_unit):
+def convert_units():
+    value = float(input("Enter the value to be converted: "))
+    from_unit = input("Enter the unit to convert from: ")
+    to_unit = input("Enter the unit to convert to: ")
+
     # Define conversion rates
     conversion_rates = {
         'kg': {'g': 1000, 'mg': 1_000_000, 'l': 1},
@@ -123,7 +126,6 @@ def convert_units(value, from_unit, to_unit):
     # Perform conversion
     result = value * conversion_rates[from_unit][to_unit]
     return result
-
 
 # main routine
 
